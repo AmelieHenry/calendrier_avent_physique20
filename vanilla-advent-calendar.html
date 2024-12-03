@@ -7,7 +7,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-image: url('https://images.pexels.com/photos/1303094/pexels-photo-1303094.jpeg');  /* You'll need to replace with your image URL */
+            background-image: url('https://images.pexels.com/photos/1303094/pexels-photo-1303094.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -17,7 +17,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.7);  /* More transparent background */
+            background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 12px;
         }
@@ -27,7 +27,7 @@
             margin-bottom: 5px;
             color: #333;
             font-size: 2em;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);  /* Text shadow for better readability */
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
         }
 
         .subtitle {
@@ -46,7 +46,7 @@
         }
 
         .day {
-            background: rgba(252, 165, 165, 0.9);  /* Slightly transparent red */
+            background: rgba(252, 165, 165, 0.9);
             padding: 15px;
             border-radius: 8px;
             cursor: pointer;
@@ -56,7 +56,7 @@
         }
 
         .day.opened {
-            background: rgba(134, 239, 172, 0.9);  /* Slightly transparent green */
+            background: rgba(134, 239, 172, 0.9);
         }
 
         .day.locked {
@@ -107,6 +107,100 @@
         .locked-message {
             font-size: 0.8em;
             color: #333;
+        }
+
+        /* Mobile Responsive Adjustments */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 1.5em;
+            }
+
+            .calendar {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .day {
+                padding: 10px;
+            }
+
+            .day-number {
+                font-size: 1.2em;
+            }
+
+            .content {
+                font-size: 0.8em;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+
+            .container {
+                padding: 8px;
+            }
+
+            .title {
+                font-size: 1.2em;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+            }
+
+            .calendar {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
+                padding: 8px;
+            }
+
+            .day {
+                padding: 8px;
+            }
+
+            .day-number {
+                font-size: 1.1em;
+                margin-bottom: 6px;
+            }
+
+            .video-link {
+                padding: 6px 10px;
+                margin: 6px 0;
+            }
+        }
+
+        /* For better touch interaction on mobile */
+        @media (hover: none) {
+            .video-link {
+                padding: 8px 12px;
+            }
+
+            .day {
+                -webkit-tap-highlight-color: transparent;
+            }
+        }
+
+        /* Landscape orientation */
+        @media screen and (max-width: 896px) and (orientation: landscape) {
+            .calendar {
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            }
+
+            .content {
+                font-size: 0.75em;
+            }
         }
     </style>
 </head>
